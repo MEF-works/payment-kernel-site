@@ -339,42 +339,26 @@
     }
 
     .code-block,
-    .architecture-card {
-      background: #0b0b0b;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      overflow-x: auto;
-    }
-
-    .code-block pre {
-      margin: 0;
-      color: #e8e8e8;
-      font-size: 0.94rem;
-      line-height: 1.8;
-      font-family: "SFMono-Regular", Consolas, monospace;
-    }
-
     .architecture {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      font-size: 1rem;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 1rem;
+}
 
-    .arch-node {
-      padding: 18px 20px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.02);
-    }
+.arch-node {
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
 
-    .arch-center {
-      border-color: rgba(244,184,96,0.24);
-      background: rgba(244,184,96,0.08);
-      color: var(--accent);
-      font-weight: 700;
-    }
+.arch-center {
+  border-color: rgba(244,184,96,0.24);
+  background: rgba(244,184,96,0.08);
+  color: var(--accent);
+  font-weight: 700;
+}
 
     .install-card {
       background:
@@ -538,9 +522,11 @@
             </button>
           </div>
 
-          <a href="#" class="secondary-btn">
-            View on GitHub →
-          </a>
+          <a 
+  href="https://github.com/MEF-works/payment-kernel"
+  target="_blank"
+  class="secondary-btn"
+>
 
         </div>
       </div>
@@ -671,39 +657,45 @@ const payment = await kernel.createPayment({
 
         <div class="architecture-card">
 
-          <div class="architecture">
+  <div class="flow-wrapper">
 
-            <div class="arch-node">
-              Your App
-            </div>
+    <div class="flow-node">
+      Your App
+    </div>
 
-            <div class="arch-node arch-center">
-              Payment Kernel
-            </div>
+    <div class="flow-arrow">→</div>
 
-            <div class="arch-node">
-              → Bitcoin
-            </div>
+    <div class="flow-node flow-kernel">
+      Payment Kernel
+    </div>
 
-            <div class="arch-node">
-              → Lightning
-            </div>
+    <div class="flow-branches">
 
-            <div class="arch-node">
-              → Cash App / Venmo / Zelle
-            </div>
+      <div class="flow-branch">
+        <span class="branch-line"></span>
+        <div class="flow-rail">Bitcoin</div>
+      </div>
 
-            <div class="arch-node">
-              → Direct to your wallet
-            </div>
+      <div class="flow-branch">
+        <span class="branch-line"></span>
+        <div class="flow-rail">Lightning</div>
+      </div>
 
-          </div>
+      <div class="flow-branch">
+        <span class="branch-line"></span>
+        <div class="flow-rail">Cash App / Venmo / Zelle</div>
+      </div>
 
-        </div>
-
+      <div class="flow-branch">
+        <span class="branch-line"></span>
+        <div class="flow-rail">Direct to your wallet</div>
       </div>
 
     </div>
+
+  </div>
+
+</div>
   </section>
 
   <section class="section">
